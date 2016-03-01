@@ -1,0 +1,13 @@
+ruby-net-telnet (0.1.1-2) unstable; urgency=medium
+
+  * Team upload.
+  * Set Multi-Arch: foreign to allow crossinstall of ruby itself
+  * Update Standards-Version to 3.9.7 (no addtl. changes)
+
+ -- Christian Hofstaedtler <zeha@debian.org>  Tue, 01 Mar 2016 19:17:36 +0100
+
+ruby-net-telnet (0.1.1-1) unstable; urgency=medium
+
+  * Initial release
+
+ -- Antonio Terceiro <terceiro@debian.org>  Wed, 20 Jan 2016 18:59:51 -0200

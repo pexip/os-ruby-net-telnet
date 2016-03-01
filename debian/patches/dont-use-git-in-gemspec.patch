@@ -1,0 +1,18 @@
+Description: remove git usage from gemspec
+Author: Antonio Terceiro <terceiro@debian.org>
+Origin: vendor
+Forwarded: no
+Last-Update: 2016-01-20
+---
+This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
+--- a/net-telnet.gemspec
++++ b/net-telnet.gemspec
+@@ -13,7 +13,7 @@ Gem::Specification.new do |spec|
+   spec.description   = %q{Provides telnet client functionality.}
+   spec.homepage      = "https://github.com/ruby/net-telnet"
+ 
+-  spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
++  spec.files         = Dir.glob('**/*').reject { |f| f.match(%r{^(debian|test|spec|features)/}) }
+   spec.bindir        = "exe"
+   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
+   spec.require_paths = ["lib"]

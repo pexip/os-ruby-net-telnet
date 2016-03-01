@@ -1,0 +1,26 @@
+Source: ruby-net-telnet
+Section: ruby
+Priority: optional
+Maintainer: Debian Ruby Extras Maintainers <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Uploaders: Antonio Terceiro <terceiro@debian.org>
+Build-Depends: debhelper (>= 9~),
+               gem2deb,
+               rake
+Standards-Version: 3.9.7
+Vcs-Git: https://anonscm.debian.org/git/pkg-ruby-extras/ruby-net-telnet.git
+Vcs-Browser: https://anonscm.debian.org/cgit/pkg-ruby-extras/ruby-net-telnet.git
+Homepage: https://github.com/ruby/net-telnet
+Testsuite: autopkgtest-pkg-ruby
+XS-Ruby-Versions: all
+
+Package: ruby-net-telnet
+Architecture: all
+XB-Ruby-Versions: ${ruby:Versions}
+# Note: this package is part of the "interpreter bundled" set. As such it should not depend on ruby and needs to be Multi-Arch aware.
+Multi-Arch: foreign
+Depends: ${misc:Depends},
+         ${shlibs:Depends}
+Description: telnet client library
+ This package provides a telnet client library to use in Ruby programs. It used
+ to be part of the Ruby standard library before Ruby 2.3, and was extracted to
+ a standalone package.
